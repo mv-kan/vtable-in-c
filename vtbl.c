@@ -20,6 +20,7 @@ void vtbl_delete(vtbl_t *vtable)
 
 void vtbl_add(vtbl_t *vtable, char *symbol, anyfn_t fn)
 {
+    assert(symbol != NULL);
     assert(vtable != NULL);
     assert(vtable->len < VTBL_MAX_VENTRIES);
     ventry_t *ventr = ventry_create(symbol, fn);
@@ -30,6 +31,8 @@ void vtbl_add(vtbl_t *vtable, char *symbol, anyfn_t fn)
 
 anyfn_t vtbl_get_fn(vtbl_t *vtable, char *symbol)
 {
+    assert(vtable != NULL);
+    assert(symbol != NULL);
     for (size_t i = 0; i < vtable->len; i++)
     {
         if (!strcmp(vtable->entrs[i]->symbol, symbol))
