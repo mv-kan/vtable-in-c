@@ -9,3 +9,7 @@ SRC=.
 run:
 	@gcc ${FLAGS_C} ${SRC_FILES} -o ${SRC}/main.bin
 	${SRC}/main.bin
+
+run_yolo:
+	@gcc ${SRC_FILES} -o ${SRC}/main.bin
+	${SRC}/main.bin
