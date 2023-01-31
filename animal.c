@@ -7,6 +7,12 @@ void animal_string(animal_t *animal, char *str)
     sprintf(str, "<class=animal, name=%s>", animal->name);
 }
 
+void animal_delete(animal_t*animal) 
+{
+    static int i = 0;
+    printf("So sad that %s has died!!! Number of dead souls = %d\n", animal->name, ++i);
+}
+
 // inits vtable of animal class
 vtbl_t *animal_get_vtable()
 {
@@ -15,6 +21,7 @@ vtbl_t *animal_get_vtable()
     if (!result) {
         result = vtbl_create();
         vtbl_add(result, "obj_string_virt", (anyfn_t)animal_string);
+        vtbl_add(result, "obj_delete_virt", (anyfn_t)animal_delete);
     }
     return result;
 }

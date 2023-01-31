@@ -17,8 +17,10 @@ struct animal_s
 typedef struct animal_s animal_t;
 
 // overloads obj_class_name_virt
-void animal_string(animal_t *obj, char *str);
+void animal_string(animal_t *animal, char *str);
 
 animal_t *animal_create(char *name);
+
+void animal_delete(animal_t*animal);
 
 #endif // ANIMAL_H
