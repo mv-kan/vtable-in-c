@@ -12,4 +12,13 @@ This is simple implementation of vtables in pure C that doesn't have it. Also we
 
 `obj.h` present in all "classes" and `obj.h` has `vpointer`, thus each class from animal to cat has vpointer.
 
-Each class (except obj) has its own vtable (one for all instances). You should look into `animal_get_vtable` function in `animal.c` and see how I used it in `animal_create` function. After that a lot of things will become much clearer.  
+Each class (except obj) has its own vtable (one for all instances). You should look into `animal_get_vtable` function in `animal.c` and see how I used it in `animal_create` function. After that a lot of things will become much clearer.
+
+## How to run it? 
+
+You need `gcc` compiler that supports c17 and `make` command on your linux machine.
+
+```
+cd <DIRECTORY WHERE MAKEFILE IS>/
+make run 
+```
