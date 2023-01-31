@@ -2,8 +2,7 @@
 #define OBJ_H
 
 #include "vtbl.h"
-
-// to overload virtual function we need to pass parent object into child implementation
+// no need vtable for obj class because we cannot create obj instances
 struct obj_s {
     vtbl_t* vptr;
 };
@@ -11,8 +10,12 @@ struct obj_s {
 typedef struct obj_s obj_t;
 
 // pure virtual function
-// symbol: "delete"
+// symbol: "obj_delete_virt"
 // fn ptr type: void(*)(obj_t*)
 void obj_delete_virt(obj_t*obj);
+
+// pure virtual function
+// symbol: "obj_string_virt"
+void obj_string_virt(char*str, obj_t *obj);
 
 #endif // OBJ_H
