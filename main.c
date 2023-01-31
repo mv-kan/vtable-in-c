@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "animal.h"
+#include "cat.h"
 #include "obj.h"
 
 void test1()
@@ -33,7 +34,31 @@ void test2()
     }
 }
 
+#define SIZE2 6
+void test3() {
+    obj_t *animal[SIZE2] = {
+        (obj_t *)cat_create("Murzik", 10),
+        (obj_t *)animal_create("Bob"),
+        (obj_t *)cat_create("Kot", 5),
+        (obj_t *)animal_create("John"),
+        (obj_t *)cat_create("Chernysh", 1),
+        (obj_t *)animal_create("Albi"),
+    };
+    char buf[100];
+    for (size_t i = 0; i < SIZE2; i++)
+    {
+        obj_string_virt(animal[i], buf);
+        printf("animal#%zu: %s\n", i, buf);
+    }
+    printf("\n");
+    // destroy all
+    for (size_t i = 0; i < SIZE2; i++)
+    {
+        obj_delete_virt(animal[i]);
+    }
+}
+
 int main()
 {
-    test2();
+    test3();
 }
