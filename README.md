@@ -1,6 +1,6 @@
 # vtable in C 
 
-This is simple implementation of vtables in pure C. Also we have here semi-inheritance and polymorphism. And all of that cool stuff in pure C! But to be honest I think this implementation is too complicated to be used anywhere. This is just merely demonstration of what we can do in C. 
+This is simple implementation of vtables in pure C. Also we have here semi-inheritance and polymorphism. And all of that in pure C! But to be honest I think this implementation is too complicated to be used anywhere. This is just merely demonstration of what we can do in C. 
 
 ## How was implemented?
 
