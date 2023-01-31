@@ -16,6 +16,6 @@ void obj_delete_virt(obj_t*obj);
 
 // pure virtual function
 // symbol: "obj_string_virt"
-void obj_string_virt(char*str, obj_t *obj);
+void obj_string_virt(obj_t *obj, char *str);
 
 #endif // OBJ_H

@@ -2,9 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void animal_string(char *str, animal_t*obj)
+void animal_string(animal_t *animal, char *str)
 {
-    animal_t *animal = (animal_t *)obj;
     sprintf(str, "<class=animal, name=%s>", animal->name);
 }
 

@@ -3,10 +3,10 @@
 #include "obj.h"
 int main()
 {
-    animal_t* animal = animal_create("haha");
+    obj_t* animal = (obj_t*)animal_create("Murzik");
 
     char buf[100];
-    obj_string_virt(buf, (obj_t*)animal);
+    obj_string_virt(animal, buf);
 
     printf("%s\n", buf);
 }
